@@ -1,1 +1,27 @@
-# Work in progress 
+# Will be updating bugs, this may take a while
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mxgified</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile">
+            <img src="avatar.jpg" alt="mxgified">
+            <h1>mxgified</h1>
+            <p> 16, UK - Message me on any of my socials if you have any questions.</p>
+        </div>
+
+        <div class="links">
+            <a href="https://tiktok.com/@mxgified" target="_blank">TikTok</a>
+            <a href="https://youtube.com/@mxgified" target="_blank">YouTube</a>
+            <a href="https://discord.com/invite/rgt34fm9sp" target="_blank">Discord</a>
+        </div>
+    </div>
+
+</body>
+</html>
