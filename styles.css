@@ -4,7 +4,7 @@
 /* General body styling */
 body {
   font-family: 'Dynapuff SB', sans-serif;
-  background: url('Github Site background.gif') no-repeat center center fixed;
+  background: url('background.gif') no-repeat center center fixed; /* Updated the file name here */
   background-size: cover;
   color: #fff;
   margin: 0;
