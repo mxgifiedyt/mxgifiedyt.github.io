@@ -4,7 +4,8 @@
 /* General body styling */
 body {
   font-family: 'Dynapuff SB', sans-serif;
-  background-color: #0d0d0d;
+  background: url('Github Site background.gif') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -42,8 +43,6 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('../images/night-sky.gif') no-repeat center center fixed;
-  background-size: cover;
 }
 
 .header h1 {
