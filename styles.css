@@ -101,6 +101,15 @@ footer {
   font-size: 14px;
 }
 
+/* Profile picture styling */
+.profile-pic {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Make the height equal to width for a square image */
+  border-radius: 50%; /* Optional: makes the image round */
+  object-fit: cover; /* Ensures the image fits within the given size without distortion */
+  margin-bottom: 20px; /* Adds space below the image */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .header h1 {
