@@ -1,122 +1,175 @@
-/* Apply Dynapuff SB font */
-@import url('https://fonts.googleapis.com/css2?family=Dynapuff+SB&display=swap');
+:root {
+    --bg-url:url("../img/background.jpg");
+}
 
-/* General body styling */
 body {
-  font-family: 'Dynapuff SB', sans-serif;
-  background: url('background.gif') no-repeat center center fixed; /* Updated the file name here */
-  background-size: cover;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  overflow-x: hidden;
+    margin:0;
+    background:#000;
+    font-family:"DM Sans", serif;
+    font-optical-sizing:auto;
+    letter-spacing:-1px;
+    user-select:none;
 }
 
-/* Navigation bar */
-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(15, 15, 15, 0.8);
-  padding: 15px 0;
-  backdrop-filter: blur(10px);
+.canvas {
+    background-color:#000;
+    background-image:var(--bg-url);
+    background-size:cover;
+    width:100%;
+    height:100%;
+    filter:blur(5px);
+    position:absolute;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
-  transition: 0.3s;
+.content {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
 }
 
-nav a:hover {
-  color: #ffcc00;
+.card {
+    width:500px;
+    height:375px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    position:relative;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius:20px;
+    padding:25px;
+    position:absolute;
 }
 
-/* Header section */
-.header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.info {
+    display:flex;
+    align-items:center;
+    flex-direction:column;
 }
 
-.header h1 {
-  font-size: 48px;
-  margin: 0;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+.info .about {
+    margin: 20px;
+    text-align:center;
 }
 
-.header p {
-  font-size: 20px;
-  color: #ddd;
-  margin-top: 10px;
+.info .about p {
+    font-size:24px;
+    color:#fff;
+    margin:0;
 }
 
-/* Section styling */
-section {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: 0 auto;
+.info .user {
+    display:flex;
+    gap:40px;
+    margin: 20px;
+    padding: 0 30px;
 }
 
-section h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+.info .user .profile {
+    border-radius:100%;
+    width:128px;
+    height:128px;
+    object-fit: cover;
 }
 
-section p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #bbb;
+.info .text {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    gap:5px;
+    height:100%;
 }
 
-/* Buttons */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
-  font-size: 18px;
-  color: #000;
-  background-color: #ffcc00;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: 0.3s;
+.info .text h1 {
+    font-size: 64px;
+    color:#fff;
+    margin:0;
 }
 
-.button:hover {
-  background-color: #ffaa00;
+.info .text p {
+    font-weight:400;
+    font-size:20px;
+    color:#ccc;
+    margin:0;
 }
 
-/* Footer */
-footer {
-  background-color: #111;
-  color: #888;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
+.location {
+    display:flex;
+    flex-direction:row;
+    gap:5px;
 }
 
-/* Profile picture styling */
-.profile-pic {
-  width: 800px; /* Set the width to 800px */
-  height: 800px; /* Set the height to 800px */
-  border-radius: 50%; /* Optional: makes the image round */
-  object-fit: cover; /* Ensures the image fits within the given size without distortion */
-  margin-bottom: 20px; /* Adds space below the image */
+.location svg {
+    width:24px;
+    height:24px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 36px;
+.contact {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row;
+    margin:20px;
+}
+
+.contact a {
+    width:100%;
+    height:100%;
+    margin: 0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.contact a svg:hover {
+    animation: scaleUp 0.15s ease forwards;
+}
+
+.contact a svg:not(:hover) {
+    animation: scaleDown 0.15s ease backwards;
+}
+
+.contact a svg {
+    width:48px;
+    height:48px;
+    color:#fff;
+}
+
+.credit {
+    display:flex;
+    z-index:10;
+    margin-top:auto;
+}
+
+.credit p {
+    font-weight:400;
+    font-size:12px;
+    letter-spacing:0px;
+    color:#ddd;
+}
+
+@keyframes scaleUp {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.15);
+    }
   }
-
-  nav a {
-    font-size: 16px;
+  
+  @keyframes scaleDown {
+    from {
+      transform: scale(1.15);
+    }
+    to {
+      transform: scale(1);
+    }
   }
-}
