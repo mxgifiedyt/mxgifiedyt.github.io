@@ -1,175 +1,153 @@
 :root {
-    --bg-url:url("../img/background.jpg");
+    --bg-url: url("background.gif");
 }
 
 body {
-    margin:0;
-    background:#000;
-    font-family:"DM Sans", serif;
-    font-optical-sizing:auto;
-    letter-spacing:-1px;
-    user-select:none;
+    margin: 0;
+    background: #000;
+    font-family: "Dynapuff SB", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: -1px;
+    user-select: none;
 }
 
 .canvas {
-    background-color:#000;
-    background-image:var(--bg-url);
-    background-size:cover;
-    width:100%;
-    height:100%;
-    filter:blur(5px);
-    position:absolute;
+    background-color: #000;
+    background-image: var(--bg-url);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+    position: absolute;
 }
 
 .content {
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .card {
-    width:500px;
-    height:375px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    position:relative;
+    width: 500px;
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.1px);
     -webkit-backdrop-filter: blur(5.1px);
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius:20px;
-    padding:25px;
-    position:absolute;
+    border-radius: 20px;
+    padding: 25px;
+    position: absolute;
 }
 
 .info {
-    display:flex;
-    align-items:center;
-    flex-direction:column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .info .about {
     margin: 20px;
-    text-align:center;
+    text-align: center;
 }
 
 .info .about p {
-    font-size:24px;
-    color:#fff;
-    margin:0;
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
 }
 
 .info .user {
-    display:flex;
-    gap:40px;
+    display: flex;
+    gap: 40px;
     margin: 20px;
     padding: 0 30px;
 }
 
 .info .user .profile {
-    border-radius:100%;
-    width:128px;
-    height:128px;
+    border-radius: 100%;
+    width: 128px;
+    height: 128px;
     object-fit: cover;
 }
 
 .info .text {
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-content:center;
-    flex-direction:column;
-    gap:5px;
-    height:100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
 }
 
 .info .text h1 {
     font-size: 64px;
-    color:#fff;
-    margin:0;
+    color: #fff;
+    margin: 0;
 }
 
 .info .text p {
-    font-weight:400;
-    font-size:20px;
-    color:#ccc;
-    margin:0;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ccc;
+    margin: 0;
 }
 
 .location {
-    display:flex;
-    flex-direction:row;
-    gap:5px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .location svg {
-    width:24px;
-    height:24px;
+    width: 24px;
+    height: 24px;
 }
 
 .contact {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:row;
-    margin:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 20px;
 }
 
 .contact a {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     margin: 0 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-.contact a svg:hover {
-    animation: scaleUp 0.15s ease forwards;
+.contact a img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.15s ease;
 }
 
-.contact a svg:not(:hover) {
-    animation: scaleDown 0.15s ease backwards;
-}
-
-.contact a svg {
-    width:48px;
-    height:48px;
-    color:#fff;
+.contact a img:hover {
+    transform: scale(1.15);
 }
 
 .credit {
-    display:flex;
-    z-index:10;
-    margin-top:auto;
+    display: flex;
+    z-index: 10;
+    margin-top: auto;
 }
 
 .credit p {
-    font-weight:400;
-    font-size:12px;
-    letter-spacing:0px;
-    color:#ddd;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #ddd;
 }
-
-@keyframes scaleUp {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.15);
-    }
-  }
-  
-  @keyframes scaleDown {
-    from {
-      transform: scale(1.15);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
