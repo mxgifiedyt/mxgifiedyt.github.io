@@ -1,5 +1,5 @@
 :root {
-    --bg-url: url("IMG_1296.gif");
+    --bg-url: url("background.gif");
 }
 
 body {
@@ -9,9 +9,6 @@ body {
     font-optical-sizing: auto;
     letter-spacing: -1px;
     user-select: none;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 .canvas {
@@ -22,11 +19,11 @@ body {
     height: 100%;
     filter: blur(5px);
     position: absolute;
-    z-index: -1;
 }
 
 .content {
-    flex: 1;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,10 +32,11 @@ body {
 
 .card {
     width: 500px;
-    height: auto;
+    height: 375px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    position: relative;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.1px);
@@ -46,17 +44,34 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     padding: 25px;
-    gap: 20px;
+    position: absolute;
 }
 
 .info {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
+    flex-direction: column;
 }
 
-.info .profile {
+.info .about {
+    margin: 20px;
+    text-align: center;
+}
+
+.info .about p {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.info .user {
+    display: flex;
+    gap: 40px;
+    margin: 20px;
+    padding: 0 30px;
+}
+
+.info .user .profile {
     border-radius: 100%;
     width: 128px;
     height: 128px;
@@ -65,16 +80,17 @@ body {
 
 .info .text {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 5px;
+    height: 100%;
 }
 
-.info .text h1.fancy {
+.info .text h1 {
     font-size: 64px;
     color: #fff;
     margin: 0;
-    font-style: italic;
-    font-family: "Brush Script MT", cursive;
 }
 
 .info .text p {
@@ -84,11 +100,33 @@ body {
     margin: 0;
 }
 
+.location {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.location svg {
+    width: 24px;
+    height: 24px;
+}
+
 .contact {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.contact a {
+    width: 100%;
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .contact a img {
@@ -101,27 +139,15 @@ body {
     transform: scale(1.15);
 }
 
-.footer {
-    text-align: center;
-    padding: 10px 0;
-    color: #ddd;
-    font-size: 12px;
+.credit {
+    display: flex;
+    z-index: 10;
     margin-top: auto;
 }
 
-.footer p {
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-.footer a {
-    color: white;
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-left: 2px;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: aqua;
-    transition: .2s ease-in;
+.credit p {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #ddd;
 }
