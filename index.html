@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mxgified</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mxgified</title>
 
-    <!-- Fredoka One Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <!-- Fredoka One -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="banner"></div>
+  <div class="page">
+    <!-- Top banner -->
+    <header class="banner" aria-label="Site banner"></header>
 
-    <div class="content">
-        <div class="card">
-            <div class="info">
-                <img src="avatar.jpg" alt="Profile Picture" class="profile">
-                <div class="text">
-                    <h1 class="fancy">mxgified</h1>
-                    <p>OG Fortnite Content Creator</p>
-                    <p>📍 London, UK</p>
-                </div>
-            </div>
-
-            <div class="contact">
-                <a href="https://youtube.com/@mxgified" target="_blank">
-                    <img src="youtube.png" alt="YouTube">
-                </a>
-                <a href="https://tiktok.com/@mxgified" target="_blank">
-                    <img src="tiktokpng.png" alt="TikTok">
-                </a>
-                <a href="https://discord.gg/rgt34fm9sp" target="_blank">
-                    <img src="dc.png" alt="Discord">
-                </a>
-            </div>
+    <!-- Main content -->
+    <main class="content" role="main">
+      <div class="card">
+        <div class="info">
+          <img src="avatar.jpg" alt="Profile picture" class="profile" />
+          <div class="text">
+            <h1 class="fancy">mxgified</h1>
+            <p>OG Fortnite Content Creator</p>
+            <p>📍 London, UK</p>
+          </div>
         </div>
-    </div>
 
+        <div class="contact" aria-label="Social links">
+          <a href="https://youtube.com/@mxgified" target="_blank" rel="noopener">
+            <img src="youtube.png" alt="YouTube" />
+          </a>
+          <a href="https://tiktok.com/@mxgified" target="_blank" rel="noopener">
+            <img src="tiktokpng.png" alt="TikTok" />
+          </a>
+          <a href="https://discord.gg/rgt34fm9sp" target="_blank" rel="noopener">
+            <img src="dc.png" alt="Discord" />
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>Made with ❤️ by <a href="https://youtube.com/@sg0hann" target="_blank">sg0hann</a></p>
+      <p>
+        Made with ❤️ by
+        <a href="https://youtube.com/@sg0hann" target="_blank" rel="noopener">sg0hann</a>
+        and mxgified
+      </p>
     </footer>
+  </div>
 </body>
 </html>
