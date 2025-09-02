@@ -1,90 +1,126 @@
-/* Font */
+/* Reset & base */
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #0d0d0d;
+}
+
 body {
-    margin: 0;
-    font-family: 'Fredoka One', sans-serif;
-    color: white;
-    background-color: #0d0d0d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0;
+  font-family: 'Fredoka One', sans-serif;
+  color: #fff;
+  background: var(--bg);
 }
 
-/* Banner */
+/* Page layout (keeps footer at bottom) */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Banner with fade into page background */
 .banner {
-    background: url("baner.png") no-repeat center center/cover;
-    width: 100%;
-    height: 250px;
+  position: relative;
+  height: 38vh;              /* responsive banner height */
+  min-height: 220px;         /* keep it tall enough on small screens */
+  background: url("baner.png") center/cover no-repeat fixed;
+}
+.banner::after {
+  /* smooth fade so there's no harsh horizontal line */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(13,13,13,0) 55%, rgba(13,13,13,0.85) 85%, #0d0d0d 100%);
 }
 
-/* Content card */
+/* Content/card */
 .content {
-    display: flex;
-    justify-content: center;
-    margin-top: -80px; /* pull card slightly into banner */
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 24px;
+  margin-top: -12vh;         /* overlap the banner slightly */
 }
 
 .card {
-    background: rgba(20, 20, 20, 0.95);
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    max-width: 400px;
-    width: 90%;
+  width: 100%;
+  max-width: 420px;
+  background: rgba(20,20,20,0.92);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
 }
 
-/* Avatar */
+/* Profile/info */
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .profile {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
 }
 
-/* Text */
 .fancy {
-    font-size: 2.5rem;
-    margin: 10px 0 5px 0;
+  font-size: 2.5rem;
+  margin: 6px 0 2px;
+  letter-spacing: -0.5px;
 }
 
 .info p {
-    margin: 5px 0;
-    font-size: 1rem;
-    opacity: 0.9;
+  margin: 4px 0;
+  font-size: 1rem;
+  opacity: 0.9;
 }
 
-/* Contact icons */
+/* Socials */
 .contact {
-    margin-top: 20px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
-
+.contact a {
+  text-decoration: none;     /* remove those tiny blue underlines */
+  display: inline-block;
+}
 .contact a img {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+  display: block;            /* prevents underline artifacts under images */
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
 .contact a img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
+  transform: scale(1.18);
+  opacity: 0.9;
 }
 
-/* Footer */
+/* Footer pinned nicely at the bottom */
 .footer {
-    margin: 20px 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
+  margin-top: auto;
+  text-align: center;
+  padding: 16px 12px 20px;
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
-
 .footer a {
-    color: #ff4d94;
-    text-decoration: none;
+  color: #ff4d94;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+/* Small screens */
+@media (max-width: 420px) {
+  .fancy { font-size: 2.1rem; }
+  .profile { width: 104px; height: 104px; }
 }
