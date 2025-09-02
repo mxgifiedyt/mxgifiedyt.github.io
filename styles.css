@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 /* Dark overlay to make content readable */
@@ -28,6 +29,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    flex: 1;
 }
 
 .card {
