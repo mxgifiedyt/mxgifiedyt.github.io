@@ -1,4 +1,4 @@
-/* General font & layout */
+/* Font */
 body {
     margin: 0;
     font-family: 'Fredoka One', sans-serif;
@@ -9,26 +9,18 @@ body {
     align-items: center;
 }
 
-/* Banner section */
+/* Banner */
 .banner {
+    background: url("baner.png") no-repeat center center/cover;
     width: 100%;
-    line-height: 0; /* removes extra spacing */
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-height: 300px;   /* keep it neat on desktop */
-    object-fit: contain; /* always show the full image */
+    height: 250px;
 }
 
 /* Content card */
 .content {
     display: flex;
     justify-content: center;
-    margin-top: -40px; /* slight overlap */
+    margin-top: -80px; /* pull card slightly into banner */
     width: 100%;
 }
 
@@ -86,7 +78,6 @@ body {
     margin: 20px 0;
     font-size: 0.9rem;
     opacity: 0.8;
-    text-align: center;
 }
 
 .footer a {
