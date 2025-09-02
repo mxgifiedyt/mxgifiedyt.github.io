@@ -1,98 +1,68 @@
-/* Font + Reset */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Full background banner */
 body {
-    margin: 0;
-    font-family: 'Fredoka One', sans-serif;
-    color: white;
-    background: url("baner.png") no-repeat center center fixed;
-    background-size: cover; /* fills entire screen */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
+  background: url("baner.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* Dark overlay to make content readable */
+/* Overlay for content */
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
-/* Content card */
-.content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex: 1;
-}
-
+/* Card styling */
 .card {
-    background: rgba(20, 20, 20, 0.95);
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    max-width: 400px;
-    width: 90%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  color: white;
+  margin-bottom: 20px;
 }
 
-/* Avatar */
-.profile {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover;
-    margin-bottom: 15px;
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
-/* Text */
-.fancy {
-    font-size: 2.5rem;
-    margin: 10px 0 5px 0;
+/* Social icons */
+.socials img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.2s;
 }
 
-.info p {
-    margin: 5px 0;
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-/* Contact icons */
-.contact {
-    margin-top: 20px;
-}
-
-.contact a img {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.contact a img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
+.socials img:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
-.footer {
-    margin: 20px 0;
-    font-size: 0.9rem;
-    opacity: 0.85;
+footer {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.footer a {
-    color: #ff4d94;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
+footer a {
+  color: #ff4da6;
+  text-decoration: none;
 }
