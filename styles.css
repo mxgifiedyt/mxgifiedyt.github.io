@@ -3,28 +3,30 @@ body {
     margin: 0;
     font-family: 'Fredoka One', sans-serif;
     color: white;
-    background-color: #0d0d0d;
+    background: url("baner.png") no-repeat center center fixed;
+    background-size: cover; /* fills entire screen */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-/* Banner */
-.banner {
-    background: url("baner.png") no-repeat center center;
-    background-size: contain; /* show full image */
-    background-color: #000;   /* fill space behind */
+/* Dark overlay to make content readable */
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: auto;
-    min-height: 250px;
-    aspect-ratio: 16 / 9; /* keeps proportions */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Content card */
 .content {
     display: flex;
     justify-content: center;
-    margin-top: -80px; /* overlap banner slightly */
     width: 100%;
 }
 
@@ -81,7 +83,7 @@ body {
 .footer {
     margin: 20px 0;
     font-size: 0.9rem;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .footer a {
