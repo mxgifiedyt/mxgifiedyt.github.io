@@ -25,11 +25,11 @@ body {
 }
 
 .card {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(129, 63, 244, 0.88);
     padding: 25px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 8px 20px rgba(44, 129, 255, 0.88);
     max-width: 400px;
     width: 90%;
 }
