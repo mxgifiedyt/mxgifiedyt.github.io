@@ -20,7 +20,7 @@ body {
 .content {
     display: flex;
     justify-content: center;
-    margin-top: -1100px; /* pull card slightly into banner */
+    margin-top: -850px; /* pull card slightly into banner */
     width: 90%;
 }
 
