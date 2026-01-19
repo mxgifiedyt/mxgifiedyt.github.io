@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: -1240px; /* pull card slightly into banner */
-    width: 80%;
+    width: 95%;
 }
 
 .card {
