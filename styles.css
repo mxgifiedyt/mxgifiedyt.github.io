@@ -13,14 +13,14 @@ body {
 .banner {
     background: url("baner.png") no-repeat center center/cover;
     width: 115%;
-    height: 1400px;
+    height: 2500px;
 }
 
 /* Content card */
 .content {
     display: flex;
     justify-content: center;
-    margin-top: -1000px; /* pull card slightly into banner */
+    margin-top: -1800px; /* pull card slightly into banner */
     width: 95%;
 }
 
